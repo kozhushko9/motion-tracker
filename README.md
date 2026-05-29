@@ -224,7 +224,8 @@ This performs:
 ### Full Redeploy
 
 ```bash
-deploy_pi_binary
+./scripts/build_pi.sh motion-tracker [Release]
+./scripts/deploy_pi_full.sh <PI_HOST> motion-tracker
 ```
 
 ### Run on Raspberry Pi
