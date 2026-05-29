@@ -1,0 +1,26 @@
+Language: Cpp
+PointerAlignment: Left
+
+# Base style to build upon
+BasedOnStyle: Google
+
+# Custom overrides
+IndentWidth: 4
+ColumnLimit: 0
+AllowShortFunctionsOnASingleLine: None
+ReflowComments: true
+BinPackParameters: false
+BinPackArguments: false
+
+# The order and grouping of #include directives
+SortIncludes: CaseSensitive
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex:           '^"stdafx\.h"'  # Put precompiled headers first
+    Priority:        -1
+  - Regex:           '^<.*\.h>'       # C standard library headers
+    Priority:        1
+  - Regex:           '^<.*'           # C++ standard library headers
+    Priority:        2
+  - Regex:           '.*'             # Everything else (project headers)
+    Priority:        3

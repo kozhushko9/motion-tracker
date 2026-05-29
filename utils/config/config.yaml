@@ -1,0 +1,54 @@
+camera:
+  width: 320
+  height: 240
+  capture_fps: 15
+  pipeline: >
+    libcamerasrc !
+    video/x-raw,width={width},height={height},framerate={fps}/1 !
+    videoconvert !
+    appsink
+
+detector:
+  num_threads: 4
+  conf_threshold: 0.3
+  class_names:
+    0: "person"
+    1: "bicycle"
+    2: "car"
+    3: "motorcycle"
+    5: "bus"
+    7: "truck"
+
+queue:
+  capture_queue_capacity: 2
+
+model:
+  path: "yolo26n_float16.tflite"
+
+metrics:
+  enable_printing: true
+  csv_path: "./runs/metrics_pi.csv"
+  report_interval_s: 5
+
+output:
+  enable_rtsp: true
+  rtsp_url: "rtsp://127.0.0.1:8554/stream"
+
+  save_video: false
+  video_path: "./runs/output.mkv"
+
+  output_fps: 15
+  bitrate_kbps: 800
+  use_hw_encoder: false
+
+  pipeline: >
+    appsrc is-live=true format=time do-timestamp=true !
+    queue leaky=downstream max-size-buffers=1 !
+    videoconvert !
+    video/x-raw,format=I420,width={width},height={height},framerate={fps}/1 !
+    x264enc tune=zerolatency speed-preset=ultrafast bitrate={bitrate} key-int-max=5 !
+    h264parse config-interval=1 !
+    tee name=t
+      t. ! queue leaky=downstream max-size-buffers=1 !
+           rtspclientsink location={url} protocols=tcp
+      {record_branch}

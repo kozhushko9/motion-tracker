@@ -1,0 +1,495 @@
+=========================================
+MODEL: yolo26n_float16.tflite
+ARCH: aarch64
+THREADS: 1
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float16.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float16.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 5.35226
+INFO: Initialized session in 457.03ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=220755 curr=199787 min=198882 max=220755 avg=203790 std=8494
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=199816 curr=197558 min=197223 max=201126 avg=197956 std=797
+
+INFO: Inference timings in us: Init: 457030, First inference: 220755, Warmup (avg): 203790, Inference (avg): 197956
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=33.332 overall=38.082
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float16.tflite --num_threads=1 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 11.06
+	System time (seconds): 0.12
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 43648
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 37
+	Minor (reclaiming a frame) page faults: 11298
+	Voluntary context switches: 158
+	Involuntary context switches: 292
+	Swaps: 0
+	File system inputs: 10456
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 197.96 ms
+Approx FPS:        5.05
+Peak memory:       42.62 MB
+
+=========================================
+MODEL: yolo26n_float16.tflite
+ARCH: aarch64
+THREADS: 2
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [2]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float16.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [2]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float16.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 5.35226
+INFO: Initialized session in 191.937ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=124831 curr=118075 min=118075 max=124831 avg=119936 std=2532
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=118420 curr=118311 min=117905 max=119726 avg=118424 std=259
+
+INFO: Inference timings in us: Init: 191937, First inference: 124831, Warmup (avg): 119936, Inference (avg): 118424
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=33.6719 overall=38.3555
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float16.tflite --num_threads=2 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 12.63
+	System time (seconds): 0.18
+	Percent of CPU this job got: 189%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 43928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11312
+	Voluntary context switches: 1059
+	Involuntary context switches: 123
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 118.42 ms
+Approx FPS:        8.44
+Peak memory:       42.90 MB
+
+=========================================
+MODEL: yolo26n_float16.tflite
+ARCH: aarch64
+THREADS: 4
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [4]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float16.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [4]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float16.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 5.35226
+INFO: Initialized session in 191.887ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=6 first=93152 curr=86904 min=86599 max=93152 avg=87774.3 std=2406
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=86508 curr=86472 min=86133 max=87627 avg=86681.6 std=321
+
+INFO: Inference timings in us: Init: 191887, First inference: 93152, Warmup (avg): 87774.3, Inference (avg): 86681.6
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=33.6836 overall=38.1875
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float16.tflite --num_threads=4 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 17.26
+	System time (seconds): 0.22
+	Percent of CPU this job got: 341%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 43752
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 11323
+	Voluntary context switches: 3185
+	Involuntary context switches: 175
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 86.68 ms
+Approx FPS:        11.54
+Peak memory:       42.73 MB
+
+=========================================
+MODEL: yolo26n_float32.tflite
+ARCH: aarch64
+THREADS: 1
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float32.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float32.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 10.1587
+INFO: Initialized session in 526.953ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=210622 curr=196713 min=196713 max=210622 avg=199723 std=5451
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=197009 curr=196695 min=196369 max=198034 avg=196992 std=285
+
+INFO: Inference timings in us: Init: 526953, First inference: 210622, Warmup (avg): 199723, Inference (avg): 196992
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=28.8125 overall=31.5508
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float32.tflite --num_threads=1 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 10.93
+	System time (seconds): 0.07
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:11.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 36956
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 53
+	Minor (reclaiming a frame) page faults: 5276
+	Voluntary context switches: 287
+	Involuntary context switches: 82
+	Swaps: 0
+	File system inputs: 19848
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 196.99 ms
+Approx FPS:        5.08
+Peak memory:       36.09 MB
+
+=========================================
+MODEL: yolo26n_float32.tflite
+ARCH: aarch64
+THREADS: 2
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [2]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float32.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [2]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float32.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 10.1587
+INFO: Initialized session in 95.155ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=122118 curr=118463 min=118388 max=122118 avg=119243 std=1441
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=118338 curr=118784 min=118246 max=131311 avg=119568 std=2673
+
+INFO: Inference timings in us: Init: 95155, First inference: 122118, Warmup (avg): 119243, Inference (avg): 119568
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=28.875 overall=31.6328
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float32.tflite --num_threads=2 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 12.66
+	System time (seconds): 0.14
+	Percent of CPU this job got: 190%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 37044
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5249
+	Voluntary context switches: 1054
+	Involuntary context switches: 277
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 119.57 ms
+Approx FPS:        8.36
+Peak memory:       36.18 MB
+
+=========================================
+MODEL: yolo26n_float32.tflite
+ARCH: aarch64
+THREADS: 4
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [4]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_float32.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [4]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_float32.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 10.1587
+INFO: Initialized session in 96.9ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=6 first=89496 curr=86841 min=86689 max=101347 avg=89752 std=5272
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=86490 curr=86526 min=85872 max=89271 avg=86730 std=475
+
+INFO: Inference timings in us: Init: 96900, First inference: 89496, Warmup (avg): 89752, Inference (avg): 86730
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=28.875 overall=31.4297
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_float32.tflite --num_threads=4 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 17.21
+	System time (seconds): 0.21
+	Percent of CPU this job got: 346%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.03
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 36836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5260
+	Voluntary context switches: 3181
+	Involuntary context switches: 278
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 86.73 ms
+Approx FPS:        11.53
+Peak memory:       35.97 MB
+
+=========================================
+MODEL: yolo26n_int8.tflite
+ARCH: aarch64
+THREADS: 1
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [1]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_int8.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [1]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_int8.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 3.07455
+INFO: Initialized session in 218.152ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=235465 curr=222591 min=221715 max=235465 avg=224920 std=5296
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=222649 curr=221873 min=221436 max=226442 avg=222121 std=729
+
+INFO: Inference timings in us: Init: 218152, First inference: 235465, Warmup (avg): 224920, Inference (avg): 222121
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=15.0469 overall=17.4688
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_int8.tflite --num_threads=1 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 12.32
+	System time (seconds): 0.03
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22540
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 27
+	Minor (reclaiming a frame) page faults: 3562
+	Voluntary context switches: 98
+	Involuntary context switches: 156
+	Swaps: 0
+	File system inputs: 6008
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 222.12 ms
+Approx FPS:        4.50
+Peak memory:       22.01 MB
+
+=========================================
+MODEL: yolo26n_int8.tflite
+ARCH: aarch64
+THREADS: 2
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [2]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_int8.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [2]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_int8.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 3.07455
+INFO: Initialized session in 86.532ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=138316 curr=134641 min=133477 max=138316 avg=134814 std=1798
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=133595 curr=133877 min=133297 max=134103 avg=133567 std=201
+
+INFO: Inference timings in us: Init: 86532, First inference: 138316, Warmup (avg): 134814, Inference (avg): 133567
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=15.0586 overall=17.2305
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_int8.tflite --num_threads=2 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 14.46
+	System time (seconds): 0.12
+	Percent of CPU this job got: 194%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22296
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3571
+	Voluntary context switches: 1161
+	Involuntary context switches: 126
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 133.57 ms
+Approx FPS:        7.49
+Peak memory:       21.77 MB
+
+=========================================
+MODEL: yolo26n_int8.tflite
+ARCH: aarch64
+THREADS: 4
+=========================================
+INFO: STARTING!
+INFO: Log parameter values verbosely: [0]
+INFO: Min num runs: [50]
+INFO: Num threads: [4]
+INFO: Min warmup runs: [5]
+INFO: Graph: [/home/pi/benchmark_yolo/models/yolo26n_int8.tflite]
+INFO: Signature to run: []
+INFO: #threads used for CPU inference: [4]
+INFO: Loaded model /home/pi/benchmark_yolo/models/yolo26n_int8.tflite
+Error in cpuinfo: prctl(PR_SVE_GET_VL) failed
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: The input model file size (MB): 3.07455
+INFO: Initialized session in 86.815ms.
+INFO: Running benchmark for at least 5 iterations and at least 0.5 seconds but terminate if exceeding 150 seconds.
+INFO: count=5 first=107850 curr=99504 min=96206 max=107850 avg=100555 std=3874
+
+INFO: Running benchmark for at least 50 iterations and at least 1 seconds but terminate if exceeding 150 seconds.
+INFO: count=50 first=98043 curr=99527 min=97397 max=104838 avg=99731.6 std=1618
+
+INFO: Inference timings in us: Init: 86815, First inference: 107850, Warmup (avg): 100555, Inference (avg): 99731.6
+INFO: Note: as the benchmark tool itself affects memory footprint, the following is only APPROXIMATE to the actual memory footprint of the model at runtime. Take the information at your discretion.
+INFO: Memory footprint delta from the start of the tool (MB): init=15.0586 overall=17.1602
+	Command being timed: "./benchmark_model --graph=/home/pi/benchmark_yolo/models/yolo26n_int8.tflite --num_threads=4 --warmup_runs=5 --num_runs=50"
+	User time (seconds): 19.59
+	System time (seconds): 0.20
+	Percent of CPU this job got: 351%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 22224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3586
+	Voluntary context switches: 3510
+	Involuntary context switches: 608
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+Average inference: 99.73 ms
+Approx FPS:        10.03
+Peak memory:       21.70 MB
+
