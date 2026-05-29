@@ -6,8 +6,6 @@ The project uses an Ubuntu host machine for ARM64 cross-compilation and deployme
 
 ## Development workflow
 
-## Development Workflow
-
 | Machine        | Role                                      |
 | -------------- | ----------------------------------------- |
 | Ubuntu Host    | cross-compilation / deployment            |
