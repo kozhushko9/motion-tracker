@@ -164,16 +164,21 @@ Benchmark tool - TensorFlow Lite `benchmark_model`:
 
 
 
-## Quick Start
+## Setup
 
+Clone this repository 
 
-Place your model files in  `./models`
+```bash
+git clone git@github.com:kozhushko9/motion-tracker.git
+```
+
+Place model files in  `./models`
 
 Expected example:
 
 `./models/yolo26n_float16.tflite`
 
-Update the model name inside the configuration file:
+Update the model name and expected image resolution inside the configuration file:
 
 ```text
 utils/config/config.yaml
@@ -195,51 +200,12 @@ Important configuration sections:
     - runtime profiling
     - CSV logging
 
-### First-Time Raspberry Pi Setup
+## Project cross-compilation
 
-Run once on the Ubuntu host:
-
-```bash 
-chmod +x ./scripts/*
-./scripts/bootstrap_pi.sh <PI_HOST> [motion-tracker] [Release]
-```
-This performs:
-
-- Host dependency setup
-- Raspberry Pi dependency setup
-- sysroot synchronization
-- ARM64 OpenCV build
-- ARM64 TensorFlow Lite build
-- project cross-compilation
-- deployment to Raspberry Pi
-
-
-### Normal Rebuild Workflow
-
-```bash
-./scripts/build_pi.sh motion-tracker [Release]
-./scripts/deploy_pi_binary.sh <PI_HOST> motion-tracker
-```
-
-### Full Redeploy
-
-```bash
-./scripts/build_pi.sh motion-tracker [Release]
-./scripts/deploy_pi_full.sh <PI_HOST> motion-tracker
-```
-
-### Run on Raspberry Pi
-
-```bash
-ssh <PI_HOST>
-cd /home/pi/motion-tracker
-./run.sh
-```
-
+- [docs/cross_compile.md](docs/cross_compile.md) — Raspberry Pi ARM64 cross-compilation workflow.
 
 ## Documentation
 
 - [docs/setup_tflite.md](docs/setup_tflite.md) — Building and vendoring TensorFlow Lite for ARM64.
 - [docs/benchmark_guide.md](docs/benchmark_guide.md) — Benchmark workflow and analysis.
-- [docs/cross_compile.md](docs/cross_compile.md) — Raspberry Pi ARM64 cross-compilation workflow.
 - [docs/streaming.md](docs/streaming.md) — RTSP streaming through MediaMTX.
