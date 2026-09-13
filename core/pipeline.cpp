@@ -299,7 +299,7 @@ void Pipeline::stream_loop() {
                 continue;
             }
 
-            frame_copy = latest_frame_for_stream_;  // shallow cv::Mat copy
+            frame_copy = latest_frame_for_stream_.image.clone();  // shallow cv::Mat copy
         }
 
         {
