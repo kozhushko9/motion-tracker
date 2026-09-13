@@ -176,12 +176,14 @@ Place model files in  `./models`
 
 Expected example:
 
-`./models/yolo26n_float16.tflite`
+```text
+./models/yolo26n_float16.tflite
+```
 
 Update the model name and expected image resolution inside the configuration file:
 
 ```text
-utils/config/config.yaml
+./utils/config/config.yaml
 ```
 
 Important configuration sections:
@@ -200,11 +202,26 @@ Important configuration sections:
     - runtime profiling
     - CSV logging
 
+### Streaming
+
+The project can optionally publish the processed camera stream through RTSP using MediaMTX.
+
+When RTSP streaming is enabled in config.yaml:
+
+```text
+enable_rtsp: true
+rtsp_url: rtsp://127.0.0.1:8554/stream
+```
+
+the application uses GStreamer's rtspclientsink to publish the video to a MediaMTX server.
+
+Follow [docs/streaming.md](docs/streaming.md)
+
 ## Project cross-compilation
 
 - [docs/cross_compile.md](docs/cross_compile.md) — Raspberry Pi ARM64 cross-compilation workflow.
 
-## Documentation
+## Other important documentation
 
 - [docs/setup_tflite.md](docs/setup_tflite.md) — Building and vendoring TensorFlow Lite for ARM64.
 - [docs/benchmark_guide.md](docs/benchmark_guide.md) — Benchmark workflow and analysis.
