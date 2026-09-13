@@ -204,18 +204,16 @@ Important configuration sections:
 
 ### Streaming
 
-The project can optionally publish the processed camera stream through RTSP using MediaMTX.
+The application can optionally publish annotated camera frames through RTSP using GStreamer and MediaMTX.
 
-When RTSP streaming is enabled in config.yaml:
+For that enable RTSP in config.yaml:
 
 ```text
 enable_rtsp: true
 rtsp_url: rtsp://127.0.0.1:8554/stream
 ```
 
-the application uses GStreamer's rtspclientsink to publish the video to a MediaMTX server.
-
-Follow [docs/streaming.md](docs/streaming.md)
+See [docs/streaming.md](docs/streaming.md) for MediaMTX installation, configuration, and RTSP playback instructions. 
 
 ## Project cross-compilation
 

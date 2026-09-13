@@ -31,7 +31,7 @@ metrics:
   report_interval_s: 5
 
 output:
-  enable_rtsp: true
+  enable_rtsp: false
   rtsp_url: "rtsp://127.0.0.1:8554/stream"
 
   save_video: false
