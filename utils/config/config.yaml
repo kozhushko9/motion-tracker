@@ -6,10 +6,11 @@ camera:
     libcamerasrc !
     video/x-raw,width={width},height={height},framerate={fps}/1 !
     videoconvert !
-    appsink
+    appsink max-buffers=1 drop=true
+    sync=false
 
 detector:
-  num_threads: 4
+  num_threads: 2
   conf_threshold: 0.3
   class_names:
     0: "person"
